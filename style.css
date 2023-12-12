@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-image: url(img/bg2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar{
+    position: fixed;
+    width: 95vw;
+    padding: 2rem;
+    height: 3rem;
+}
+
+.navbar > ul{
+    display: flex;
+    float: right;
+    list-style: none;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+
+.navbar > .logo{
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 6rem;
+}
+
+.home{
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+li:nth-last-child(-n+2) a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0; /* Początkowo szerokość linii wynosi 0 */
+    border-bottom: 2px solid black;
+    transition: width 0.1s ease-out; /* Efekt przejścia */
+}
+
+li:nth-last-child(-n+2) a:hover::after {
+    width: 100%; /* Po najechaniu myszką linia się rozciąga od lewej do prawej */
+}
+
+.container{
+    color: white;
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95vw;
+}
+
+.text{
+    width: 55vw;
+    margin: 0 auto;
+}
+
+h2{
+    position: relative;
+}
+
+p{
+    margin-bottom: 60px;
+}
+
+.text-ani{
+    color: white;
+    font-size: 5em;
+    text-shadow: 5px 5px 15px black;
+    position: absolute;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
